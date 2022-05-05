@@ -1,8 +1,18 @@
+import java.util.ArrayList;
+
 public class Alumni {
 
     public String username;
     public String rank;
     public int scripCount;
+    public ArrayList purchases;
+
+    public Alumni(String username, String rank, int scripCount, ArrayList purchases){
+        this.username = username;
+        this.rank = rank;
+        this.scripCount = scripCount;
+        this.purchases = purchases;
+    }
 
     public Alumni(String username, String rank, int scripCount){
         this.username = username;

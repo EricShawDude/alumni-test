@@ -83,6 +83,21 @@ public class ScripSystem {
         }
     }
 
+    public void addUser(String name, String rank){
+        members.add(new Alumni(name,rank,0));
+        System.out.println(name + " successfully added.");
+    }
+
+    public void removeUser(String name){
+        for (Alumni a : members){
+            if (a.getUsername().equalsIgnoreCase(name)) {
+                members.remove(a);
+                System.out.println("User successfully removed");
+                break;
+            }
+        }
+    }
+
     public void updateDatabase() throws IOException {
         try {
             FileWriter file = new FileWriter("database.txt");
